@@ -6,6 +6,7 @@
 ### Autonomous Hiring Intelligence & Candidate Evaluation Engine
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=SubhadeepBhadra/talentpulse-ai&branch=main&mainModule=streamlit_app.py)
 [![Vanilla JS](https://img.shields.io/badge/Stack-Vanilla%20ES6%2B%20%2F%20CSS3-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Python Server](https://img.shields.io/badge/Backend-Python%20Threading%20Server-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Theme: Enterprise Light](https://img.shields.io/badge/Theme-Enterprise%20Light-4F46E5.svg)](#design--ux-philosophy)
@@ -13,7 +14,7 @@
 
 *Transforming unstructured resumes into calibrated, multi-dimensional candidate insights, tailored interview kits, and executive hiring analytics.*
 
-[Live Demo](#quick-start) • [Why We Built This](#the-problem-why-we-built-talentpulse) • [Core Features](#features-at-a-glance) • [Architecture](#under-the-hood-system-architecture) • [Getting Started](#quick-start)
+[Streamlit App](#-run-with-streamlit) • [Live Web Demo](#quick-start) • [Why We Built This](#the-problem-why-we-built-talentpulse) • [Core Features](#features-at-a-glance) • [Architecture](#under-the-hood-system-architecture) • [Getting Started](#quick-start)
 
 </div>
 
@@ -150,6 +151,10 @@ talentpulse-ai/
 │       ├── hiringManagerView.js    # Comparison matrix & scorecard decision hub
 │       ├── executiveDashboard.js   # Leadership analytics & hiring ROI dashboard
 │       └── candidatePortalView.js  # Candidate application & resume preview portal
+├── .streamlit/
+│   └── config.toml            # Streamlit theme configuration (Enterprise Light)
+├── streamlit_app.py           # Native Streamlit dashboard & live embedding
+├── requirements.txt           # Python dependencies for Streamlit & Plotly
 ├── index.html                 # Single-Page Application entry point
 ├── server.py                  # Multi-threaded local Python web server
 └── README.md                  # Comprehensive documentation
@@ -159,22 +164,38 @@ talentpulse-ai/
 
 ## ⚡ Quick Start
 
-### Prerequisites
-- Python 3.8+ (no external pip packages needed—uses standard library)
-- Any modern web browser (Chrome, Edge, Firefox, Safari)
+You can run TalentPulse AI using either **Streamlit** (interactive analytics & document parsing) or the **Native Web Application** (full drag-and-drop SPA).
 
-### 1. Clone the Repository
+### Option A: 🎈 Run with Streamlit (Recommended for Data & AI)
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=SubhadeepBhadra/talentpulse-ai&branch=main&mainModule=streamlit_app.py)
+
 ```bash
+# 1. Clone repository
 git clone https://github.com/SubhadeepBhadra/talentpulse-ai.git
 cd talentpulse-ai
-```
 
-### 2. Start the Local Server
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Launch Streamlit
+streamlit run streamlit_app.py
+```
+Visit **[http://localhost:8501](http://localhost:8501)** for the native Streamlit AI studio, resume parsing, Plotly funnel charts, and embedded web OS.
+
+---
+
+### Option B: 🌐 Run Standalone Web App (Zero Dependencies)
+
 ```bash
+# 1. Clone the repository
+git clone https://github.com/SubhadeepBhadra/talentpulse-ai.git
+cd talentpulse-ai
+
+# 2. Start the Local Server
 python server.py
 ```
 
-### 3. Open in Browser
 Visit **[http://localhost:5173](http://localhost:5173)** in your browser!
 
 *(Alternatively, you can open `index.html` directly in any web browser without running a server.)*
