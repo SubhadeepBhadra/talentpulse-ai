@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalentPulse AI - Autonomous Recruiting Platform & Candidate Evaluation Engine</title>
+  <meta name="description" content="TalentPulse AI is an enterprise recruiting platform that automates candidate evaluations, provides structured insights, and accelerates hiring workflows with AI.">
+  <meta name="theme-color" content="#f8fafc">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pipeline.css">
+  <link rel="stylesheet" href="styles/evaluation.css">
+  <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+  <!-- App Root Mount Point -->
+  <div id="app"></div>
+
+  <!-- SVG Gradient Definitions -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <linearGradient id="scoreGradHigh" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" />
+        <stop offset="100%" stop-color="#34d399" />
+      </linearGradient>
+      <linearGradient id="scoreGradMed" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f59e0b" />
+        <stop offset="100%" stop-color="#fbbf24" />
+      </linearGradient>
+      <linearGradient id="scoreGradLow" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f43f5e" />
+        <stop offset="100%" stop-color="#fb7185" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Application Logic Scripts -->
+  <script src="js/seedData.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/aiEngine.js"></script>
+  <script src="js/components/candidateDetailModal.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/jobsView.js"></script>
+  <script src="js/components/pipelineView.js"></script>
+  <script src="js/components/hiringManagerView.js"></script>
+  <script src="js/components/executiveDashboard.js"></script>
+  <script src="js/components/candidatePortalView.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
